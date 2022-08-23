@@ -653,7 +653,7 @@ address {
   line-height: 24px;
   color: var(--white-color);
 }
-
+/* modal */
 .backdrop {
   position: fixed;
   top: 0;
@@ -694,3 +694,4 @@ address {
   visibility: hidden;
   pointer-events: none;
 }
+
