@@ -101,8 +101,6 @@ address {
 }
 /* page header */
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid var(--header-line);
 }
 
@@ -127,6 +125,10 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 32px;
+  padding-bottom: 32px;
+    
 }
 
 .site-nav .link-nav:hover,
@@ -136,6 +138,20 @@ address {
 
 .site-nav .link-nav.current {
   color: var(--accent-color);
+  position: relative;
+}
+
+
+.site-nav .link-nav.current::after{
+position: absolute;
+width: 100%;
+height: 4px;
+bottom: 0;
+left:0;
+border-radius: 2px;
+background-color: var(--accent-color);
+display: block;
+content:"";
 }
 
 .auth-nav .link-auth {
@@ -144,6 +160,7 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav .link-auth:hover,
@@ -170,6 +187,11 @@ address {
 .auth-item:not(:last-child) {
   margin-right: var(--middle-gap);
 }
+
+.nav-item{
+  display: flex;
+}
+
 
 .nav-item:not(:last-child) {
   margin-right: var(--middle-gap);
@@ -234,6 +256,7 @@ address {
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-primary:hover,
@@ -369,15 +392,19 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link {
+
+
+.social-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
 .social-link:focus {
-  background-color: #2196f3;
+  background-color: var(--accent-color);
 }
 
 .social-link:hover .social-icon,
@@ -409,6 +436,7 @@ address {
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-link:hover .client-icon,
@@ -418,6 +446,7 @@ address {
 
 .client-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-link:hover,
@@ -463,13 +492,14 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-link {
+.footer-social-icon {
   fill: var(--white-color);
 }
 
@@ -477,12 +507,7 @@ address {
 .footer-link:focus {
   background-color: #2196f3;
 }
-
-.footer-link:hover .social-icon,
-.footer-link:focus .social-icon {
-  fill: var(--white-color);
-}
-
+ 
 .footer-social {
   display: flex;
   margin-top: 20px;
@@ -505,6 +530,9 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .portfolio-nav .portfolio-link:hover,
@@ -518,6 +546,7 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-case {
@@ -532,7 +561,24 @@ address {
 
 .portfolio-nav .portfolio-link.current {
   color: var(--accent-color);
+  position: relative;
 }
+
+
+
+.portfolio-nav .portfolio-link.current::after{
+
+  position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    display: block;
+    content: "";
+  }
+
 
 .portfolio-nav {
   display: flex;
@@ -571,6 +617,9 @@ address {
   background-color: var(--white-color);
   color: var(--text-color-decoration);
   padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .first {
   padding: 6px 25px;
@@ -630,6 +679,7 @@ address {
   text-decoration: none;
   color: var(--primary-text-color);
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-wrapper {
   padding: 20px 24px;
